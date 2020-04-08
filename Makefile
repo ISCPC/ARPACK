@@ -73,4 +73,4 @@ cleanlib:
 	( cd $(SRCdir); $(MAKE) clean )
 
 help:
-    @$(ECHO) "usage: make ?"
+	@$(ECHO) "usage: make ?"
