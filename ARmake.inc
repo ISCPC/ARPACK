@@ -33,7 +33,7 @@ home = $(WORKDIR)
 #  | the end of library names             |
 #  %--------------------------------------%
 #
-PLAT = INTEL
+PLAT = NEC
 #
 #  %------------------------------------------------------%
 #  | The directories to find the various pieces of ARPACK |
@@ -44,7 +44,8 @@ LAPACKdir    = $(home)/LAPACK
 UTILdir      = $(home)/UTIL
 SRCdir       = $(home)/SRC
 #
-DIRS        = $(BLASdir) $(LAPACKdir) $(UTILdir) $(SRCdir)
+#DIRS        = $(BLASdir) $(LAPACKdir) $(UTILdir) $(SRCdir)
+DIRS        = $(UTILdir) $(SRCdir)
 #
 # %-------------------------------------------------------------------%
 # | Comment out the previous line and uncomment the following         |
@@ -102,8 +103,8 @@ ALIBS =  $(ARPACKLIB) $(LAPACKLIB) $(BLASLIB)
 # | for your system.                        |
 # %-----------------------------------------%
 #
-FC      = gfortran
-FFLAGS	= -O2
+FC      = nfort
+FFLAGS	= -O3
 
 LDFLAGS = 
 CD      = cd
