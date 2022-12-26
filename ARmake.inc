@@ -104,6 +104,10 @@ ALIBS =  $(ARPACKLIB) $(LAPACKLIB) $(BLASLIB)
 #
 FC      = gfortran
 FFLAGS	= -O2
+GFORTVERSION = $(shell expr `gfortran -dumpversion | cut -f1 -d.` \>= 10)
+ifeq ($(GFORTVERSION),1)
+FFLAGS += -fallow-argument-mismatch
+endif
 
 LDFLAGS = 
 CD      = cd
